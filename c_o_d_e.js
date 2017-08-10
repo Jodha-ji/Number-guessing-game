@@ -3,7 +3,7 @@ function guessing_game(){
 	var turns=1;
     
 	while(1){
-        var guess=prompt("Okay now, think a number smaller than 100, you win if we are on same number...");
+        var guess=parseInt(prompt("Okay now, think a number smaller than 100, you win if we are on same number..."));
         
 		if(guess > 99 || guess <1)
 	        alert("Number should be between 1 and 100, this turn won't be counted");
@@ -14,8 +14,6 @@ function guessing_game(){
             alert("Sorry, the number is bigger..");
         
 		else{
-			myBody=document.getElementsByTagName("body")[0];
-		    myBody.style.background=gray;
 			alert("Congratulations! You have guessed the number!\nIt took you " +turns+ " turns to guess the number!");
 			break;
         }
